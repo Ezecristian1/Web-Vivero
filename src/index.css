@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+@theme {
+  /* ==========================================================
+     Paleta de Verdes - 'olive' (#83781b como DEFAULT/500)
+     ========================================================== */
+  --color-olive-100: #1a1805;
+  --color-olive-200: #34300b;
+  --color-olive-300: #4f4810;
+  --color-olive-400: #696116;
+  --color-olive-500: #83781b; /* DEFAULT */
+  --color-olive-600: #beaf27;
+  --color-olive-700: #dbcd50;
+  --color-olive-800: #e7de8a;
+  --color-olive-900: #f3eec5;
+  --color-olive: var(--color-olive-500); /* Define 'DEFAULT' como la variable base */
+
+
+  /* ==========================================================
+     Paleta de Verdes - 'olivine' (#95b46a como DEFAULT/500)
+     ========================================================== */
+  --color-olivine-100: #1e2613;
+  --color-olivine-200: #3c4c26;
+  --color-olivine-300: #5a7239;
+  --color-olivine-400: #79984d;
+  --color-olivine-500: #95b46a; /* DEFAULT */
+  --color-olivine-600: #aac388;
+  --color-olivine-700: #bfd2a5;
+  --color-olivine-800: #d5e1c3;
+  --color-olivine-900: #eaf0e1;
+  --color-olivine-950: #eff2e4;
+  --color-olivine: var(--color-olivine-500); /* Define 'DEFAULT' como la variable base */
+
+
+  /* ==========================================================
+     Paleta de Verdes - 'asparagus' (#709255 como DEFAULT/500)
+     ========================================================== */
+  --color-asparagus-100: #161d11;
+  --color-asparagus-200: #2d3a22;
+  --color-asparagus-300: #435733;
+  --color-asparagus-400: #597444;
+  --color-asparagus-500: #709255; /* DEFAULT */
+  --color-asparagus-600: #8cac72;
+  --color-asparagus-700: #a9c195;
+  --color-asparagus-800: #c5d5b8;
+  --color-asparagus-900: #e2eadc;
+  --color-asparagus: var(--color-asparagus-500); /* Define 'DEFAULT' como la variable base */
+
+
+  /* ==========================================================
+     Paleta de Verdes - 'dark_moss_green' (#3e5622 como DEFAULT/500)
+     ========================================================== */
+  --color-dark-moss-green1-100: #0d1207;
+  --color-dark-moss-green1-200: #19230e;
+  --color-dark-moss-green1-300: #263515;
+  --color-dark-moss-green1-400: #32461c;
+  --color-dark-moss-green1-500: #3e5622; /* DEFAULT */
+  --color-dark-moss-green1-600: #678f39;
+  --color-dark-moss-green1-700: #8ebd59;
+  --color-dark-moss-green1-800: #b4d390;
+  --color-dark-moss-green1-900: #d9e9c8;
+  --color-dark-moss-green1: var(--color-dark-moss-green1-500); /* Define 'DEFAULT' como la variable base */
+
+
+  /* ==========================================================
+     Paleta de Verdes - 'dark_green' (#172815 como DEFAULT/500)
+     ========================================================== */
+  --color-dark-green-100: #050804;
+  --color-dark-green-200: #091008;
+  --color-dark-green-300: #0e180d;
+  --color-dark-green-400: #122011;
+  --color-dark-green-500: #172815; /* DEFAULT */
+  --color-dark-green-600: #396334;
+  --color-dark-green-700: #5b9e53;
+  --color-dark-green-800: #8fc189;
+  --color-dark-green-900: #c7e0c4;
+  --color-dark-green: var(--color-dark-green-500); /* Define 'DEFAULT' como la variable base */
+
+
+  /* Otros colores o variables de tema */
+
+  --color-tea-green-50: #f7faf1; /* Un verde muy claro, casi blanco */
+  --color-tea-green-100: #f7fafa; /* Un verde claro suave */
+  --color-tea-green-200: #f7faff; /* Un verde claro más saturado */
+  --color-tea-green-300: #b2c89a; /* Un verde medio */
+  --color-tea-green-400: #9bb87d; /* Un verde medio más oscuro */
+  --color-tea-green-500: #84a860; /* Un verde medio oscuro */
+  --color-tea-green-600: #6d9850; /* Un verde oscuro */
+  --color-tea-green-700: #568840; /* Un verde más oscuro */
+  --color-tea-green-800: #3f782f; /* Un verde muy oscuro */
+  --color-tea-green-900: #28681f; /* Un verde casi negro */
+  /* ==========================================================
+     Paleta 'dark_moss_green' (#606c38 como DEFAULT/500)
+     ========================================================== */
+  --color-dark-moss-green-100: #13160b;
+  --color-dark-moss-green-200: #262b16;
+  --color-dark-moss-green-300: #394121;
+  --color-dark-moss-green-400: #4c562c;
+  --color-dark-moss-green-500: #606c38; /* DEFAULT */
+  --color-dark-moss-green-600: #88994f;
+  --color-dark-moss-green-700: #a9b876;
+  --color-dark-moss-green-800: #c5d0a3;
+  --color-dark-moss-green-900: #e2e7d1;
+  --color-dark-moss-green: var(--color-dark-moss-green-500); /* Define 'DEFAULT' */
+
+
+  /* ==========================================================
+     Paleta 'pakistan_green' (#283618 como DEFAULT/500)
+     ========================================================== */
+  --color-pakistan-green-100: #080b05;
+  --color-pakistan-green-200: #101509;
+  --color-pakistan-green-300: #18200e;
+  --color-pakistan-green-400: #1f2a13;
+  --color-pakistan-green-500: #283618; /* DEFAULT */
+  --color-pakistan-green-600: #547133;
+  --color-pakistan-green-700: #80ac4d;
+  --color-pakistan-green-800: #aac987;
+  --color-pakistan-green-900: #d5e4c3;
+  --color-pakistan-green: var(--color-pakistan-green-500); /* Define 'DEFAULT' */
+
+
+  /* ==========================================================
+     Paleta 'cornsilk' (#fefae0 como DEFAULT/500)
+     ========================================================== */
+  --color-cornsilk-100: #5d5103;
+  --color-cornsilk-200: #baa206;
+  --color-cornsilk-300: #f8dc27;
+  --color-cornsilk-400: #fbeb84;
+  --color-cornsilk-500: #fefae0; /* DEFAULT */
+  --color-cornsilk-600: #fefbe7;
+  --color-cornsilk-700: #fefced;
+  --color-cornsilk-800: #fffdf3;
+  --color-cornsilk-900: #fffef9;
+  --color-cornsilk: var(--color-cornsilk-500); /* Define 'DEFAULT' */
+
+
+  /* ==========================================================
+     Paleta 'earth_yellow' (#dda15e como DEFAULT/500)
+     ========================================================== */
+  --color-earth-yellow-100: #34210b;
+  --color-earth-yellow-200: #684216;
+  --color-earth-yellow-300: #9d6321;
+  --color-earth-yellow-400: #d1842c;
+  --color-earth-yellow-500: #dda15e; /* DEFAULT */
+  --color-earth-yellow-600: #e4b57f;
+  --color-earth-yellow-700: #ebc79f;
+  --color-earth-yellow-800: #f1dabf;
+  --color-earth-yellow-900: #f8ecdf;
+  --color-earth-yellow: var(--color-earth-yellow-500); /* Define 'DEFAULT' */
+
+
+  /* ==========================================================
+     Paleta 'tiger’s_eye' (#bc6c25 como DEFAULT/500)
+     ========================================================== */
+  --color-tigers-eye-100: #251507;
+  --color-tigers-eye-200: #4b2b0f;
+  --color-tigers-eye-300: #704016;
+  --color-tigers-eye-400: #96561e;
+  --color-tigers-eye-500: #bc6c25; /* DEFAULT */
+  --color-tigers-eye-600: #d98840;
+  --color-tigers-eye-700: #e3a570;
+  --color-tigers-eye-800: #ecc3a0;
+  --color-tigers-eye-900: #f6e1cf;
+  --color-tigers-eye: var(--color-tigers-eye-500); /* Define 'DEFAULT' */
+
+
+  /* Otros colores o variables de tema que necesites */
+
+}
+  /* ==========================================================
+     Configuración de quick-info
+     ========================================================== */
+
+.quick-info {
+  @apply   drop-shadow-[2px_2px_2px_black] p-10 rounded-xl;
+}
+
+/* Otros estilos CSS de tu aplicación bg-earth-yellow-900 hover:bg-earth-yellow-800 */
+
+
+
+@layer utilities {
+  .bg-corners-top {
+    
+    background-image: 
+      url('src/assets/Images/extracciones/green-tea-50-tl.svg'),
+      url('src/assets/Images/extracciones/green-tea-50-tr.svg');
+
+    background-position: top left, top right;
+    background-repeat:no-repeat;
+  }
+}
+  .bg-corners-bottom {
+    background-image: 
+      url('src/assets/Images/extracciones/green-tea-50-bl.svg'),
+      url('src/assets/Images/extracciones/green-tea-50-br.svg');
+    background-position: bottom left, bottom right;
+    background-repeat: no-repeat;
+  }
+  
+
+  .empty-page-template-md {
+    @apply  min-h-screen bg-tea-green-500 text-tea-green-900;
+  }
+
