@@ -29,7 +29,7 @@ function QuickInfo() {
   ];
 
   return (
-    <section className="py-20 bg-corners-top">
+    <section className="py-20 ">
 
       {/* Contenido a la derecha */}
 
@@ -43,7 +43,7 @@ function QuickInfo() {
 
         {/* separador decorativo animado */}
         <div className="mt-6 mb-12 flex justify-center">
-          <div className="w-24 md:w-28 h-1 bg-gradient-to-r from-emerald-800 via-lime-500 to-emerald-600 rounded-full opacity-100 animate-pulse"></div>
+          <div className="w-24 md:w-28 h-1 bg-gradient-to-r from-emerald-100 via-lime-700 to-emerald-600 rounded-full opacity-100 animate-pulse"></div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"> {/* Contenedor de las 4 etiquetas Quickinfo */}

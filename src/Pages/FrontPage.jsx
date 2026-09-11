@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 import "../index.css";
 function Frontpage() {
   return (
-    <div className="font-sans text-gray-800 bg-transparent">
+    <div className="font-sans text-gray-800 bg-transparent bg-green-500">
       <Navbar />
       {/* Hero Section */}
       <HeroSection />
@@ -16,9 +16,8 @@ function Frontpage() {
       <QuickInfo />
       
       {/* Optional Biodiversity Map Preview */}
-      <section className=" bg-gray-50 py-20  text-center">
-        <h2 className=" text-3xl  bg-gray font-bold mb-6">Mapa de Biodiversidad</h2>
-        <p className="max-w-xl mx-auto mb-6">Podes encontrarnos acá</p>
+      <section className="  py-20  text-center">
+        <h2 className=" text-3xl  bg-gray font-bold mb-6">Podes encontrarnos acá</h2>
         <div className="flex justify-center">
           <iframe
             title="Mapa de biodiversidad UNICEN"
@@ -33,11 +32,10 @@ function Frontpage() {
             className="rounded-xl shadow-lg w-full max-w-3xl"
         ></iframe>
         </div>
-        <button className="mt-6 bg-green-600 hover:bg-green-700 text-white py-2 px-6 rounded-xl text-lg transition">Ver mapa completo</button>
       </section>
 
       {/* Noticias o Actividades */}
-      <section className="bg-corners-bottom py-20  text-center">
+      <section className="py-20  text-center">
         <h2 className="text-3xl font-bold mb-10">Novedades</h2>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
           <div className="bg-gray-100 p-6 rounded-xl shadow">
