@@ -4,13 +4,12 @@ import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC1k-QrF1F_piFffcf3jp9tGfNrkeSmrt0",
-  authDomain: "sendero-pampa.firebaseapp.com",
-  projectId: "sendero-pampa",
-  storageBucket: "sendero-pampa.firebasestorage.app",
-  messagingSenderId: "334953327482",
-  appId: "1:334953327482:web:a23ed752958413053e84c3",
-  measurementId: "G-3BNLSHVYVB"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);

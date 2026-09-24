@@ -115,7 +115,15 @@ El proyecto quedará disponible en `http://localhost:5173` (puerto por defecto d
 
 El archivo `src/firebaseConfig.js` inicializa la app de Firebase (Firestore + Analytics) y se conecta al proyecto `sendero-pampa`.
 
-Actualmente la configuración está **hardcodeada directamente en el código fuente**. Es una práctica común ver esto en proyectos con Firebase (las claves del SDK cliente no son secretas por diseño, la seguridad real la dan las [reglas de Firestore](https://firebase.google.com/docs/firestore/security/get-started)), pero para facilitar mantenimiento y evitar reconfigurar código si cambia el proyecto, se recomienda migrar a variables de entorno:
+
+~~Actualmente la configuración está **hardcodeada directamente en el código fuente**. Es una práctica común ver esto en proyectos con Firebase (las claves del SDK cliente no son secretas por diseño, la seguridad real la dan las [reglas de Firestore](https://firebase.google.com/docs/firestore/security/get-started)), pero para facilitar mantenimiento y evitar reconfigurar código si cambia el proyecto, se recomienda migrar a variables de entorno:~~
+
+Actualmente existen dos projectos de firebase, configurados a traves de variables de entorno .env.development y .env.production 
+
+Se puede alternar entre entornos y bases de datos mediante el uso de:
+
+bash:
+firebase use production/development 
 
 ```bash
 # .env (no versionar)
@@ -175,7 +183,12 @@ firebase deploy
 
 Relevado del código y de `Tareas.md`. Actualizar esta sección a medida que se resuelvan:
 
-- [ ] Migrar configuración de Firebase a variables de entorno (`.env`)
+- ~~[ ] Migrar configuración de Firebase a variables de entorno (`.env`)~~
+- [ ] Branch por feature.
+- [ ] Dockerizar
+- [ ] Definir las imagenes que seran servidas directamente al usuario y aquellas que se alojaran en Cloudinary.
+- [ ] Migracion a Cloudinary
+- [ ] crear panel de admin
 - [ ] Completar contenido de las páginas placeholder: `Vivero`, `Contacto`
 - [ ] Definir subrutas de `Reserva` (`/reserva/actividades`, `/servicios`, `/ubicacion`) que ya están linkeadas en el Navbar
 - [ ] Terminar/corregir el componente `Map.jsx` (Leaflet) — actualmente no se usa en ninguna página

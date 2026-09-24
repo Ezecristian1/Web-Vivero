@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "sendero-pampa"
+    "default": "sendero-pampa-dev",
+    "development": "sendero-pampa-dev",
+    "production": "sendero-pampa"
   }
 }

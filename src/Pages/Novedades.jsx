@@ -3,44 +3,45 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import Novedad from "../Components/Novedad";
 import novedad_prueba from "../assets/Images/novedad_prueba.jpg";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { collection, onSnapshot, addDoc } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
 export default function Novedades() {
   const [novedades, setNovedades] = useState([]);
+  const [status, setStatus] = useState(null); // feedback no bloqueante
 
-  // Cargar novedades desde Firestore
+  // Suscripción en tiempo real: se actualiza sola, sin recargar
   useEffect(() => {
-    const fetchNovedades = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, "novedades"));
+    const unsubscribe = onSnapshot(
+      collection(db, "novedades"),
+      (querySnapshot) => {
         const novedadesData = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
         setNovedades(novedadesData);
-      } catch (error) {
-        console.error("Error al cargar novedades: ", error);
+      },
+      (error) => {
+        console.error("Error al escuchar novedades: ", error);
+        setStatus("Error al cargar novedades");
       }
-    };
-
-    fetchNovedades();
+    );
+    return () => unsubscribe(); // limpieza al desmontar
   }, []);
 
-  // Agregar una novedad de prueba
   const agregarNovedadPrueba = async () => {
     try {
       await addDoc(collection(db, "novedades"), {
         title: "Nueva especie registrada",
-        description:
-          "Investigadores identifican una especie rara en la zona serrana.",
+        description: "Que tan lejos no se ni de que parte.",
         imageUrl: novedad_prueba,
-        date: "2026-05-03",
+        date: "2030-12-12",
         link: "https://www.ejemplo.com/novedad",
       });
-      alert("Novedad de prueba agregada");
+      setStatus("Novedad de prueba agregada ✓");
     } catch (error) {
       console.error("Error al agregar novedad de prueba: ", error);
+      setStatus("Error al agregar novedad");
     }
   };
 
@@ -69,6 +70,7 @@ export default function Novedades() {
           >
             Agregar novedad de prueba
           </button>
+          {status && <p className="mt-2 text-sm text-gray-700">{status}</p>}
         </div>
       </section>
       <Footer />
