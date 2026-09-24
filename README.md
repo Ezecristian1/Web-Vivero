@@ -184,10 +184,10 @@ firebase deploy
 Relevado del código y de `Tareas.md`. Actualizar esta sección a medida que se resuelvan:
 
 - ~~[ ] Migrar configuración de Firebase a variables de entorno (`.env`)~~
-- [ ] Branch por feature.
 - [ ] Dockerizar
 - [ ] Definir las imagenes que seran servidas directamente al usuario y aquellas que se alojaran en Cloudinary.
 - [ ] Migracion a Cloudinary
+- [ ] Agregar autenticación
 - [ ] crear panel de admin
 - [ ] Completar contenido de las páginas placeholder: `Vivero`, `Contacto`
 - [ ] Definir subrutas de `Reserva` (`/reserva/actividades`, `/servicios`, `/ubicacion`) que ya están linkeadas en el Navbar
